@@ -1,0 +1,194 @@
+html {
+    background-color: lightgrey;
+}
+
+body {
+    margin: auto;
+    font: 1.2em sans-serif;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+/* Header */
+.header {
+    order: 0;
+}
+
+#title-bar {
+    background-color: rgb(13, 78, 27);
+    color: white;
+    margin-top: 0px;
+    padding-top: 5px;
+    padding-left: 30px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+/* Main */
+.main {
+    order: 1;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+/* .main > div {
+    flex-grow: 1;
+    width: 50%;
+} */
+
+.cards-and-scores {
+    order: 0;
+    flex: 2;
+}
+
+.card-lists {
+    order: 1;
+    flex: 1;
+}
+
+/* Cards and Scores */
+.cards-and-scores {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.cards-and-scores > div {
+    flex-grow: 1;
+    width: 50%;
+}
+
+.cards {
+    order: 0;
+    flex: 1;
+}
+
+.scores {
+    order: 1;
+    flex: 1;
+}
+
+/* Card Image */
+#current-card-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 125px;
+    width: 182px;
+}
+
+/* Scores */
+.scores {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.scores > div {
+    flex-grow: 1;
+    height: 50%;
+}
+
+.current-score {
+    order: 0;
+    flex: 1;
+}
+
+.score-evaluation {
+    order: 1;
+    flex: 1;
+}
+
+/* Card Lists */
+.card-lists {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.card-lists > div {
+    flex-grow: 1;
+    width: 50%;
+}
+
+.players-cards {
+    order: 0;
+    flex: 1;
+}
+
+.houses-cards {
+    order: 1;
+    flex: 1;
+}
+
+/* Players Cards */
+.players-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#your-cards {
+    order: 0;
+    flex: 1;
+}
+
+#players-cards-list {
+    order: 1;
+    flex: 2;
+}
+
+
+/* Houses Cards */
+.houses-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#houses-cards-label {
+    order: 0;
+    flex: 1;
+}
+
+#houses-cards-list {
+    order: 1;
+    flex: 2;
+}
+
+/* Footer */
+.footer {
+    order: 2;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#hit {
+    order: 0;
+}
+
+#stay {
+    order: 1;
+}
+
+.footer > button {
+    flex-grow: 1;
+    font-size: x-large;
+    height: 50px;
+    background-color: lightgoldenrodyellow;
+    width: 50%;
+}
