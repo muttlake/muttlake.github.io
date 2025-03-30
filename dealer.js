@@ -80,11 +80,11 @@ function dealHouseCardsUntil(targetValue) {
                 }
                 else // houseHighTotal > 21
                 {
-                    if (houseLowTotal > targetValue) 
+                    if (houseLowTotal > targetValue)
                     {
                         continueDealing = false;
                     }
-                    else if (houseLowTotal == targetValue) 
+                    else if (houseLowTotal == targetValue)
                     {
                         continueDealing = false;
                     }

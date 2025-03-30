@@ -92,11 +92,11 @@ function setFinalResult(finalPlayerScore, finalHouseScore) {
     {
         if(finalHouseScore > 21)
         {
-            resultText.innerText = "Both House and Player Busted!"; 
+            resultText.innerText = "Both House and Player Busted!";
         }
         else if(finalHouseScore == 21)
         {
-            resultText.innerText = "House wins. House got 21! Player Busted."; 
+            resultText.innerText = "House wins. House got 21! Player Busted.";
         }
         else //finalHouseScore < 21
         {
@@ -107,11 +107,11 @@ function setFinalResult(finalPlayerScore, finalHouseScore) {
     {
         if(finalHouseScore > 21)
         {
-            resultText.innerText = "Nice! Player got a 21! House busted."; 
+            resultText.innerText = "Nice! Player got a 21! House busted.";
         }
         else if(finalHouseScore == 21)
         {
-            resultText.innerText = "Both Player and House got a 21!!"; 
+            resultText.innerText = "Both Player and House got a 21!!";
         }
         else //finalHouseScore < 21
         {
@@ -122,25 +122,25 @@ function setFinalResult(finalPlayerScore, finalHouseScore) {
     {
         if(finalHouseScore > 21)
         {
-            resultText.innerText = "Nice! Player wins! House busted!"; 
+            resultText.innerText = "Nice! Player wins! House busted!";
         }
         else if(finalHouseScore == 21)
         {
-            resultText.innerText = "House got a 21!!"; 
+            resultText.innerText = "House got a 21!!";
         }
         else //finalHouseScore < 21
         {
             if(finalPlayerScore > finalHouseScore)
             {
-                resultText.innerText = "Nice! Player wins!"; 
+                resultText.innerText = "Nice! Player wins!";
             }
             else if (finalPlayerScore == finalHouseScore)
             {
-                resultText.innerText = "Player and House tie."; 
+                resultText.innerText = "Player and House tie.";
             }
             else //finalPlayerScore < finalHouseScore
             {
-                resultText.innerText = "House wins!"; 
+                resultText.innerText = "House wins!";
             }
         }
     }
