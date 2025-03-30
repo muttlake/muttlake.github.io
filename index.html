@@ -18,28 +18,34 @@
             <div class="cards-and-scores">
                 <div class="cards">
                     <div class="current-card">
-                        <img id="current-card-image" src="./playingCards/ace_of_clubs.png" alt="card-image">
+                        <img id="current-card-image" src="./playingCards/placeholder_card.png" alt="card-image">
                     </div>
                 </div>
                 <div class="scores">
                     <div class="current-score">
-                        <p>Current Score</p>
-                        <p id="score-value">21</p>
+                        <div class="player-score">
+                            <p id="player-score-label">Player Score:</p>
+                            <p id="player-score-value">Start Playing!</p>
+                        </div>
+                        <div class="house-score">
+                            <p id="house-score-label">House Score:</p>
+                            <p id="house-score-value">Start Playing!</p>
+                        </div>
                     </div>
-                    <div class="score-evaluation">
-                        <p>Evaluation</p>
-                        <p id="score-eval">BUST</p>
+                    <div class="result">
+                        <p id="result-label">Result:</p>
+                        <p id="result-text">Pending</p>
                     </div>
                 </div>
             </div>
             <div class="card-lists">
-                <div class="players-cards">
-                    <p id="your-cards">Your Cards:</p>
-                    <p id="players-cards-list"></p>
+                <div class="player-cards">
+                    <p id="player-cards-label">Player Cards:</p>
+                    <p id="player-cards-list"></p>
                 </div>
-                <div class="houses-cards">
-                    <p id="houses-cards-label">Houses Cards:</p>
-                    <p id="houses-cards-list"></p>
+                <div class="house-cards">
+                    <p id="house-cards-label">House Cards:</p>
+                    <p id="house-cards-list"></p>
                 </div>
             </div>
         </div>

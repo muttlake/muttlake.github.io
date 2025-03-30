@@ -21,7 +21,7 @@ body {
 }
 
 #title-bar {
-    background-color: rgb(13, 78, 27);
+    background-color: darkgreen;
     color: white;
     margin-top: 0px;
     padding-top: 5px;
@@ -40,11 +40,6 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
 }
-
-/* .main > div {
-    flex-grow: 1;
-    width: 50%;
-} */
 
 .cards-and-scores {
     order: 0;
@@ -87,27 +82,98 @@ body {
     width: 182px;
 }
 
-/* Scores */
+/* Scores and Result*/
 .scores {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
 }
 
-.scores > div {
-    flex-grow: 1;
-    height: 50%;
+.current-score {
+    order: 0;
+    flex: 2;
 }
 
+.result {
+    order: 1;
+    flex: 1;
+}
+
+/* Scores */
 .current-score {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.player-score {
     order: 0;
     flex: 1;
 }
 
-.score-evaluation {
+.house-score {
     order: 1;
     flex: 1;
 }
+
+/* Player Score */
+.player-score {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+#player-score-label {
+    order: 0;
+    flex: 1;
+}
+
+#player-score-value {
+    order: 1;
+    flex: 3;
+    color: darkgreen;
+}
+
+/* House Score */
+.house-score {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+#house-score-label {
+    order: 0;
+    flex: 1;
+}
+
+#house-score-value {
+    order: 1;
+    flex: 3;
+    color: darkblue;
+}
+
+/* Result */
+.result {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+#result-label {
+    order: 0;
+    flex: 1;
+    margin-left: 10%;
+}
+
+#result-text {
+    order: 1;
+    flex: 3;
+    margin-left: 10%;
+}
+
 
 /* Card Lists */
 .card-lists {
@@ -121,47 +187,47 @@ body {
     width: 50%;
 }
 
-.players-cards {
+.player-cards {
     order: 0;
     flex: 1;
 }
 
-.houses-cards {
+.house-cards {
     order: 1;
     flex: 1;
 }
 
-/* Players Cards */
-.players-cards {
+/* player Cards */
+.player-cards {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
 }
 
-#your-cards {
+#player-cards-label {
     order: 0;
     flex: 1;
 }
 
-#players-cards-list {
+#player-cards-list {
     order: 1;
     flex: 2;
 }
 
 
-/* Houses Cards */
-.houses-cards {
+/* house Cards */
+.house-cards {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
 }
 
-#houses-cards-label {
+#house-cards-label {
     order: 0;
     flex: 1;
 }
 
-#houses-cards-list {
+#house-cards-list {
     order: 1;
     flex: 2;
 }

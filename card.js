@@ -36,6 +36,8 @@ const SUIT_SHORT_SYMBOLS = {"clubs": CLUBS_SUIT_CODE, "diamonds": DIAMONDS_SUIT_
 
 export const ACE = "ace";
 export const HIGH_ACE_VALUE = 11;
+export const DEFAULT_HOUSE_TARGET_TOTAL = 17;
+export const TWENTY_ONE_TARGET_TOTAL = 21;
 
 
 
@@ -51,7 +53,12 @@ function buildCardDeck() {
     return cards;
 }
 
-export const cardDeck = buildCardDeck();
+export function reBuildCardDeck() {
+    cardDeck.splice(0, cardDeck.length);
+    cardDeck = buildCardDeck();
+}
+
+export let cardDeck = buildCardDeck();
 export const playersCards = [];
 export const housesCards = [];
 
