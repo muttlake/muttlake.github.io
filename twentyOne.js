@@ -23,14 +23,6 @@ const houseTotalValueText = document.getElementById("house-score-value");
 const resultText = document.getElementById("result-text");
 
 //constants
-const BUSTED = "BUSTED";
-const BOTH_BUSTED = "Both BUSTED!";
-const TWENTY_ONE = "TWENTY ONE! Player wins";
-const TWENTY_ONE_HOUSE_TIES = "TWENTY ONE! House ties Player";
-const TWENTY_ONE_FOR_HOUSE = "House gets a Twenty One";
-const PLAYER_AND_HOUSE_TIE = "Player and House Tie!";
-const HOUSE_WINS = "House Wins";
-const PLAYER_WINS = "Player Wins";
 const PENDING = "PENDING";
 const STAY = "STAY";
 const PLAY_AGAIN = "Play Again";
@@ -95,46 +87,61 @@ function closeOutGameWithDealer() {
     stayButton.innerText = PLAY_AGAIN;
 }
 
-function setFinalResult(playerScore, houseScore) {
-    console.log(`player score: ${playerScore}`);
-    console.log(`house score: ${houseScore}`);
-    //get result text
-    if (playerScore > 21 && houseScore > 21) {
-        resultText.innerText = BOTH_BUSTED;
-    }
-    else if (playerScore <= 21 && houseScore > 21) {
-        if (playerScore == 21) {
-            resultText.innerText = TWENTY_ONE;
+function setFinalResult(finalPlayerScore, finalHouseScore) {
+    if(finalPlayerScore > 21)
+    {
+        if(finalHouseScore > 21)
+        {
+            resultText.innerText = "Both House and Player Busted!"; 
         }
-        resultText.innerText = PLAYER_WINS;
-    }
-    else if (playerScore > 21 && houseScore <= 21) {
-        if (houseScore === 21) {
-            resultText.innerText = TWENTY_ONE_FOR_HOUSE;
+        else if(finalHouseScore == 21)
+        {
+            resultText.innerText = "House wins. House got 21! Player Busted."; 
         }
-        resultText.innerText = HOUSE_WINS;
-    }
-    else if (playerScore === 21 && houseScore === 21) {
-        resultText.innerText = TWENTY_ONE_HOUSE_TIES;
-    } 
-    else if (playerScore === 21 && houseScore < 21) {
-        resultText.innerText = TWENTY_ONE;
-    }
-    else if (playerScore < 21 && houseScore === 21) {
-        resultText.innerText = TWENTY_ONE_FOR_HOUSE;
-    }
-    //both house and player have less than 21
-    else {
-        if (playerScore > houseScore) {
-            resultText.innerText = PLAYER_WINS;
+        else //finalHouseScore < 21
+        {
+            resultText.innerText = "House wins. Player Busted."
         }
-        else if (playerScore === houseScore) {
-            resultText.innerText = PLAYER_AND_HOUSE_TIE;
+    }
+    else if (finalPlayerScore == 21)
+    {
+        if(finalHouseScore > 21)
+        {
+            resultText.innerText = "Nice! Player got a 21! House busted."; 
         }
-        //houseScore is higher than player score
-        else {
-            resultText.innerText = HOUSE_WINS;
+        else if(finalHouseScore == 21)
+        {
+            resultText.innerText = "Both Player and House got a 21!!"; 
         }
-
+        else //finalHouseScore < 21
+        {
+            resultText.innerText = "Nice! Player got a 21!";
+        }
+    }
+    else //finalPlayerScore < 21
+    {
+        if(finalHouseScore > 21)
+        {
+            resultText.innerText = "Nice! Player wins! House busted!"; 
+        }
+        else if(finalHouseScore == 21)
+        {
+            resultText.innerText = "House got a 21!!"; 
+        }
+        else //finalHouseScore < 21
+        {
+            if(finalPlayerScore > finalHouseScore)
+            {
+                resultText.innerText = "Nice! Player wins!"; 
+            }
+            else if (finalPlayerScore == finalHouseScore)
+            {
+                resultText.innerText = "Player and House tie."; 
+            }
+            else //finalPlayerScore < finalHouseScore
+            {
+                resultText.innerText = "House wins!"; 
+            }
+        }
     }
 }
