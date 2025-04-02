@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integer Conversion</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <script src="./dist/convertDecimalToOtherBases.js" type="module"></script>
+    <div class=".main-container">
+        <header>
+            <h2>Integer Conversions</h2>
+        </header>
+        <main>
+            <div class="number-container decimal-number-to-convert">
+                <label for="decimal-text">Decimal Number</label>
+                <div class="input-container">
+                    <input type="text" name="decimal" id="decimal-number">
+                </div>
+            </div>
+            <div class="number-container binary-number-to-convert">
+                <label for="binary-text">Binary Number</label>
+                <div class="input-container">
+                    <input type="text" name="binary" id="binary-number">
+                </div>
+            </div>
+            <div class="number-container hex-number-to-convert">
+                <label for="hex-text">Hexadecimal Number</label>
+                <div class="input-container">
+                    <input type="text" name="hex" id="hex-number">
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>** Maximum Value: 2<sup>32</sup> = 100000000000000000000000000000000<sub>2</sub> = 4294967296<sub>10</sub> = 100000000<sub>16</sub></p>
+        </footer>
+    </div>
+</body>
+
+</html>
