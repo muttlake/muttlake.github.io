@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <script src="./dist/diceRoller.js" type="module"></script>
+    <header>
+        <h1>Dice Roller!</h1>
+    </header>
+    <main>
+        <div class="rules">
+            <p>** Roll a 6 and get $60. Any other number loses $10</p>
+        </div>
+        <div class="dice-and-score">
+            <div class="dice">
+                <img id="dice-image" src="./dice_images/side_1.png" alt="1">
+            </div>
+            <div class="score">
+                <div class="score-title">
+                    <p>Roll Score</p>
+                </div>
+                <div class="score-value">
+                    <p id="score-value-amount">Score-Value</p>
+                </div>
+            </div>
+        </div>
+        <div class="roll-button-and-running-total">
+            <div class="roll">
+                <button id="roll-button">Roll</button>
+            </div>
+            <div class="reset">
+                <button id="reset-button">Reset</button>
+            </div>
+            <div class="running-total">
+                <div class="total-title">
+                    <p>Total</p>
+                </div>
+                <div class="total-value">
+                    <p id="total-value-amount">Total-Value</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+
+</html>
